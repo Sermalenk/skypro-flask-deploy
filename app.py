@@ -33,7 +33,8 @@ def index():
     response = {
         "total": len(users),
         "users": [{"username": user.username} for user in users],
-        "secret": app.config['SUPERSECRET_INFO']
+        "secret": app.config['SUPERSECRET_INFO'],
+        "new param": "12341234"
     }
     return jsonify(response)
 
